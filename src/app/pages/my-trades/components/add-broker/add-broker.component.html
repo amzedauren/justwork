@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Add Broker</ion-title>
+    <ion-searchbar debounce="500" placeholder="Search..."></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <span float="left">My brokers</span>
+
+  <ion-list no-padding>
+    <ion-reorder-group>
+      <ion-item *ngFor="let broker of brokers">
+        <div>
+          <h3>{{broker.NAME}}</h3>
+        </div>
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+    </ion-reorder-group>
+  </ion-list>
+
+
+</ion-content>

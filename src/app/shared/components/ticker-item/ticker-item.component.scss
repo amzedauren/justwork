@@ -1,0 +1,19 @@
+.demo-chart {
+  height: 25px;
+  width: 70px;
+  //height: 100px;
+  //width: 200px;
+}
+
+.ticker-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  min-height: 25px;
+}
+
+.stock {
+  display: flex;
+  flex-direction: column;
+}

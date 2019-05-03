@@ -1,0 +1,26 @@
+<ion-content padding>
+  <ion-title>Filter</ion-title>
+
+  <div>
+    <p>Choose broker</p>
+    <div class="fast-filter-container">
+      <app-button-filter valueTitleKey="NAME"
+                         (select)="onButtonFilterTap($event)"
+                         [nullValue]="true"
+                         [values]="brokers"></app-button-filter>
+    </div>
+
+    <app-simple-picker-input
+        title="Currency"
+        [pickedTitle]="pickedCurrencyOption?.title"
+        (select)="showCurrencyPicker()"></app-simple-picker-input>
+
+    <app-simple-picker-input
+        title="Security"
+        [pickedTitle]="pickedSecurityOption?.title"
+        (select)="showSecurityPicker()"></app-simple-picker-input>
+
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-content>
+  <ion-item>
+    <img src="assets/icon/backBtn.png" alt="" width="20px" margin-end="12px" (click)="close()">
+
+    <span>Trades History</span>
+
+    <ion-buttons routerLink="/qr-scanner" slot="end">
+      <ion-button color="secondary">
+        <ion-icon name="expand"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
+
+  <ion-list padding>
+    <ion-item-group>
+      <ion-row align-items-baseline>
+        <ion-col align-self-center>
+          <span float="left">Trades History</span>
+        </ion-col>
+        <ion-col align-self-center>
+          <div float-right>
+<!--            <img src="assets/icon/search.png" alt="" width="24px" margin-end="12px">-->
+            <img src="assets/icon/filter.png" alt="" width="24px"
+                 (click)="showTradeHistoryFilter()">
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <app-trade
+          *ngFor="let trade of trades"
+          [trade]="trade"></app-trade>
+
+    </ion-item-group>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>{{profile_detail__personal_info}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button *ngIf="editMode" (click)="save()">{{profile_detail__save}}</ion-button>
+      <ion-button *ngIf="!editMode" (click)="setEditMode()">{{profile_detail__edit}}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="personInfoForm">
+
+    <ion-list>
+
+      <ion-item>
+      <ion-label>Title</ion-label>
+      <ion-select placeholder="Select One" formControlName="title" [disabled]="!editMode">
+        <ion-select-option value="Mr">{{shared__mr}}</ion-select-option>
+        <ion-select-option value="Mrs">{{shared__mrs}}</ion-select-option>
+        <ion-select-option value="Miss">{{shared__miss}}</ion-select-option>
+        <ion-select-option value="Dr">{{shared__dr}}</ion-select-option>
+      </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="{{shared__name}}" formControlName="name" [readonly]="!editMode"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="{{shared__surname}}" formControlName="surname" [readonly]="!editMode"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>{{shared__country}}</ion-label>
+        <ion-select placeholder="Select One" formControlName="country" [disabled]="!editMode">
+          <ion-select-option *ngFor="let i of countries;" [value]="i['id']">{{i['title']}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="{{shared__email_address}}" formControlName="email" [readonly]="!editMode"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="{{shared__iin}}" formControlName="iin" [readonly]="!editMode"></ion-input>
+      </ion-item>
+
+    </ion-list>
+  </form>
+</ion-content>
+
+

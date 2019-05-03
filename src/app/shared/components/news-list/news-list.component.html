@@ -1,0 +1,24 @@
+<ion-card *ngFor="let i of data" class="news-card" (click)="onCardClicked(i)">
+
+  <ion-card-content class="news-card">
+
+    <div class="card-content">
+      <div class="image-div">
+        <ion-icon style="font-size: 50px" class="image" name="grid"></ion-icon>
+      </div>
+      <div class="header-div">
+        <span class="title" [innerHTML]="i['title']['rendered']"></span>
+        <br>
+        <span class="s-title">{{i['date'] | date}}</span>
+      </div>
+    </div>
+
+  </ion-card-content>
+
+</ion-card>
+<ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+  <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="Loading more data...">
+  </ion-infinite-scroll-content>
+</ion-infinite-scroll>

@@ -1,0 +1,33 @@
+<ion-grid>
+  <ion-row>
+    <ion-col text-center>
+      <ion-label class="content-title">2nd Authentification Code</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col text-center>
+      <ion-label class="content-subtitle">Your 6-digit authentification code</ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="code-holder">
+    <ion-grid>
+      <ion-row>
+        <ion-col text-center>
+          <div class="code-holder-item" *ngFor="let num of code?.split('')">
+            <app-code-number [number]="num"></app-code-number>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-row>
+
+  <ion-row>
+    <ion-col text-center>
+    <span>Enter in {{countdownSecToRefresh}} sec...
+      <span class="color-sand" (click)="onRefresh()">Refresh</span>
+    </span>
+    </ion-col>
+  </ion-row>
+
+</ion-grid>

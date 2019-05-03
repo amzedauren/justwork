@@ -1,0 +1,7 @@
+<ion-item (click)="select.emit()">
+  <span>{{title}}</span>
+  <div slot="end">
+    <span>{{!!pickedTitle ? pickedTitle : 'All'}}</span>
+    <img src="assets/icon/arrow_pick.png" alt="" width="20px">
+  </div>
+</ion-item>

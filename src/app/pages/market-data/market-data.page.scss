@@ -1,0 +1,47 @@
+.logo-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background-color: #fafafa;
+}
+
+.home-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  .home-subheader {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+  }
+  background-color: #fafafa;
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
+.trades {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  .list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}

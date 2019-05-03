@@ -1,0 +1,48 @@
+<ion-app>
+    <ion-menu contentId="content">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>
+            <img src="assets/logo-144x60.png" class="header-logo">
+          </ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-list lines="full" class="menu-list">
+          <ion-menu-toggle *ngFor="let menuItem of marketSideMenuItems">
+            <ion-item [routerLink]="menuItem.url" routerDirection="root"
+                      [class.active-menu-item]="selectedPath === menuItem.url" detail="false">
+              <ion-icon [src]="menuItem.icon"></ion-icon>
+              <ion-label>{{menuItem.title}}</ion-label>
+              <ion-badge *ngIf="menuItem.hasBadge" color="tertiary">99</ion-badge>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <div class="margin-top-40">
+            <ion-menu-toggle *ngFor="let menuItem of settingsSideMenuItems" class="margin-top-40">
+              <ion-item [routerLink]="menuItem.url" routerDirection="root"
+                        [class.active-menu-item]="selectedPath === menuItem.url" detail="false"
+                        [ngClass]="menuItem.className">
+                <ion-icon [src]="menuItem.icon"></ion-icon>
+                <ion-label>{{menuItem.title}}</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+          </div>
+
+          <div class="margin-top-40">
+            <ion-menu-toggle *ngFor="let menuItem of logoutSideMenuItems">
+              <ion-item [routerLink]="menuItem.url" routerDirection="root"
+                        [class.active-menu-item]="selectedPath === menuItem.url" detail="false"
+                        lines="none">
+                <ion-icon [src]="menuItem.icon"></ion-icon>
+                <ion-label>{{menuItem.title}}</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+          </div>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet id="content" main></ion-router-outlet>
+</ion-app>

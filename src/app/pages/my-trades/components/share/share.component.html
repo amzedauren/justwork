@@ -1,0 +1,33 @@
+<ion-col (click)="onClick()" style="width: 100%">
+  <ion-row>
+    <ion-col>
+      <span margin-end="5px">{{broker.NAME}}</span>
+      <img *ngIf="!expanded" src="assets/icon/arrow_down.png" alt="" width="12px">
+      <img *ngIf="expanded" src="assets/icon/arrow_up.png" alt="" width="12px">
+      <br/>
+      <span class="subtitle">{{secCodeList.substr(1)}}</span>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngIf="expanded">
+    <table>
+      <thead>
+      <tr>
+        <th>Security</th>
+        <th>Total</th>
+        <th>Free</th>
+        <th>Locked</th>
+        <th>Reserved</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let share of shares">
+        <td>{{share["Instrument Code"]}}</td>
+        <td>{{share.Total}}</td>
+        <td>{{share.Free}}</td>
+        <td>{{share.Locked}}</td>
+        <td>{{share.Reserved}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </ion-row>
+</ion-col>

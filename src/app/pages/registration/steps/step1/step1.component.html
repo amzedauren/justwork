@@ -1,0 +1,25 @@
+<ion-slides class="register-slides" pager="true" [options]="{effect: 'flip'}">
+  <!--todo to different component-->
+  <ion-slide>
+    <h1>Onboarding 1</h1>
+  </ion-slide>
+  <ion-slide>
+    <h1>Onboarding 2</h1>
+  </ion-slide>
+  <ion-slide>
+    <h1>Onboarding 3</h1>
+  </ion-slide>
+</ion-slides>
+
+
+<ion-list>
+  <ion-text>
+    <ion-label>Get started with AIX</ion-label>
+  </ion-text>
+  <ion-item>
+    <ion-icon name="color-wand"></ion-icon>
+    <ion-input type="tel" placeholder="Номер телефона" [(ngModel)]="phoneNumber"></ion-input>
+  </ion-item>
+</ion-list>
+<ion-button routerLink="/registration/step2" [queryParams]="{phoneNumber: phoneNumber}" class="next-btn" color="light" [disabled]="isNextDisabled()">Next</ion-button>
+

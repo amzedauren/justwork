@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="market-data"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{contact_us__title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="contact-us-container" [formGroup]="form">
+    <span class="bold-header">{{contact_us__aix}}</span>
+    <span>{{aix_address}}</span>
+    <span class="bold-header">{{contact_us__contacts}}</span>
+    <span>{{aix_email}}</span>
+    <span>{{aix_phone}}</span>
+    <span class="bold-header">{{contact_us__get_in_touch}}</span>
+
+    <ion-item><ion-input [placeholder]="contact_us__name" formControlName="name" [disabled]="authorized"></ion-input></ion-item>
+    <ion-item><ion-input [placeholder]="contact_us__email" formControlName="email" [disabled]="authorized"></ion-input></ion-item>
+    <ion-item><ion-input [placeholder]="contact_us__country" formControlName="countryCode" [disabled]="authorized"></ion-input></ion-item>
+    <ion-item><ion-input [placeholder]="contact_us__telephone" formControlName="phoneNumber" [disabled]="authorized"></ion-input></ion-item>
+    <ion-item>
+      <ion-textarea [placeholder]="contact_us__message" formControlName="message"></ion-textarea>
+    </ion-item>
+  </div>
+  <div class="confirmation">
+    <div class="confirmation__checkbox">
+      <ion-checkbox [(ngModel)]="confirmed"></ion-checkbox>
+    </div>
+    <span>{{contact_us__terms_common}} <a (click)="showTerms()"><b>{{term_of_use__title}}</b></a> {{contact_us__and}} <a><b>{{privacy_police__title}}</b></a></span>
+  </div>
+
+  <ion-button color="light" class="send-btn" [disabled]="!form.valid || !confirmed" (click)="send()">{{contact_us__send}}</ion-button>
+</ion-content>

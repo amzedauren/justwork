@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="market-data"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{profile__title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="profile-container">
+    <div class="profile__info">
+      <span class="profile__info-name">{{ title_person }}.{{ name }} {{surname }}</span>
+      <span>{{ telephone }}</span>
+    </div>
+    <div class="profile__content">
+      <div class="profile__content-row">
+        <div class="profile__content_option" (click)="openProfileInfo()">
+          <span class="option_title">{{profile__info}}</span>
+          <span>{{profile__info_content}}</span>
+        </div>
+        <ion-icon name="arrow-forward"></ion-icon>
+      </div>
+      <div class="profile__content-row">
+        <div class="profile__content_option" (click)="openPasswordInfo()">
+          <span class="option_title">{{profile__password}}</span>
+          <span>{{profile__password_content}}</span>
+        </div>
+        <ion-icon name="arrow-forward"></ion-icon>
+      </div>
+    </div>
+  </div>
+  <ion-button color="light" routerLink="/login" class="profile__log-out-btn">{{profile__log_out}}</ion-button>
+</ion-content>

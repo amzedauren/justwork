@@ -1,0 +1,16 @@
+<div class="step4Content">
+  <ion-button routerLink="/registration/step3" color="light">back</ion-button>
+  <br>
+  <br>
+  <ion-label>Step 3/3</ion-label>
+  <h1>Create pattern</h1>
+  <ion-label>Remember password. If you forgot, you can restore in Setting</ion-label>
+
+  <div id="pattern-container"></div>
+
+  <div class="g-pass"></div>
+
+  <ion-button routerLink="/registration/last-step" (click)="skip()" *ngIf="!patternStr" style="width: 100%" color="light">Skip</ion-button>
+  <ion-button routerLink="/registration/last-step" (click)="save()" *ngIf="patternStr" style="width: 100%" color="light">Save</ion-button>
+
+</div>

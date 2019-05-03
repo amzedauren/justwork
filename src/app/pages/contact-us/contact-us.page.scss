@@ -1,0 +1,26 @@
+.contact-us-container {
+  display: flex;
+  flex-direction: column;
+  span {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.bold-header {
+  font-weight: bold;
+}
+
+.confirmation {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  &__checkbox {
+    padding: 10px;
+  }
+}
+
+.send-btn {
+  margin-top: 10px;
+  width: 100%;
+}

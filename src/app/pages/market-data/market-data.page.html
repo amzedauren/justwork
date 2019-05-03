@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-toggle>
+        <ion-button>
+          <ion-icon src="assets/icon/menu.svg"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
+
+    <ion-title>
+      <img src="assets/logo-144x60.png" class="header-logo">
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon src="assets/icon/qr.svg"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--<app-stock-ticker [data]="stocks" *ngIf="stocks"></app-stock-ticker>-->
+  <div class="home-header">
+    <h4>Your total balance</h4>
+    <h1 style="margin-top: 0"><b>$8,000</b></h1>
+    <div class="home-subheader">
+      <span>+50%</span>
+      <span>2.3%</span>
+    </div>
+  </div>
+
+  <div class="trades">
+    <div class="nav">
+      <span style="font-size: 15px"><b>Trades(2)</b></span>
+      <div class="action">
+        <ion-icon style="font-size: 20px" name="add" (click)="selectTrades()"></ion-icon>
+        <ion-icon style="font-size: 20px" name="menu"></ion-icon>
+      </div>
+    </div>
+    <div class="list">
+      <div class="trade" *ngFor="let t of stocks">
+        <aix-trade [data]="t" *ngIf="t['selected']" routerLink="/trade-detail"
+                   [queryParams]="{secCode: t['secCode']}"></aix-trade>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="news">
+    <div class="nav">
+      <span style="font-size: 15px"><b>Company Disclosures</b></span>
+    </div>
+    <app-disclosure-list></app-disclosure-list>
+  </div>
+
+  <!--<ion-list>-->
+  <!--<ion-item *ngFor="let i of stocks">-->
+  <!--<ion-label>{{i['currency']}}</ion-label>-->
+  <!--<ion-label style="min-width: 100px">{{i['secCode']}}</ion-label>-->
+  <!--<ion-label>{{i['lastTrade']}}</ion-label>-->
+  <!--<ion-label>{{i['lowPrice']}}</ion-label>-->
+  <!--<ion-label>{{i['highPrice']}}</ion-label>-->
+  <!--</ion-item>-->
+
+  <!--</ion-list>-->
+</ion-content>

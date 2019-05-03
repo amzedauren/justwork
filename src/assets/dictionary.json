@@ -1,0 +1,66 @@
+{
+  "translates": [
+    {"code":"about_aix__title","title":"About AIX"},
+    {"code":"language__title","title":"Language"},
+    {"code":"contact_us__title","title":"Contact us"},
+    {"code":"contact_us__aix","title":"Astana International Exchange"},
+    {"code":"contact_us__contacts","title":"Contacts"},
+    {"code":"contact_us__get_in_touch","title":"Get in touch"},
+    {"code":"contact_us__send","title":"send"},
+    {"code":"contact_us__terms_common","title":"I can confirm that I have read and accept the"},
+    {"code":"contact_us__and","title":"and"},
+    {"code":"term_of_use__title","title":"Term of use"},
+    {"code":"privacy_police__title","title":"Privacy police"},
+    {"code":"contact_us__name","title":"Name Surname *"},
+    {"code":"contact_us__email","title":"Email *"},
+    {"code":"contact_us__country","title":"Country *"},
+    {"code":"contact_us__telephone","title":"Telephone *"},
+    {"code":"contact_us__message","title":"Message *"},
+    {"code":"contact_us__get_in_touch_success","title":"Thank! Message sent, wait for reply."},
+
+
+    {"code": "profile__title", "title": "Profile"},
+    {"code": "profile__info", "title": "Personal information"},
+    {"code": "profile__password", "title": "Password and security"},
+    {"code": "profile__info_content", "title": "Name, surname, email..."},
+    {"code": "profile__password_content", "title": "Telephone, password, patterns"},
+    {"code": "profile__log_out", "title": "Log out"},
+
+    {"code": "security__title", "title": "Password & security"},
+    {"code": "security__change_number", "title": "Change number"},
+    {"code": "security__change_password", "title": "Change password"},
+    {"code": "security__face_id", "title": "Face ID"},
+    {"code": "security__pattern", "title": "Pattern"},
+    {"code": "profile_detail__personal_info", "title": "Personal information"},
+    {"code": "profile_detail__edit", "title": "Edit"},
+    {"code": "profile_detail__save", "title": "save"},
+
+    {"code": "shared__mr", "title": "Mr"},
+    {"code": "shared__mrs", "title": "Mrs"},
+    {"code": "shared__miss", "title": "Miss"},
+    {"code": "shared__dr", "title": "Dr"},
+    {"code": "shared__name", "title": "Name"},
+    {"code": "shared__surname", "title": "Surname"},
+    {"code": "shared__iin", "title": "IIN/Passport no(Optional)"},
+    {"code": "shared__country", "title": "Country"},
+    {"code": "shared__email_address", "title": "Email address"},
+    {"code": "shared__phone_number", "title": "Phone number"},
+    {"code": "shared__new_pass", "title": "New password"},
+    {"code": "shared__repeat_pass", "title": "Repeat password"},
+    {"code": "shared__save", "title": "Save"},
+
+    {"code": "help__title", "title": "Help"},
+
+    {"code": "forgot_pass__success_text", "title": "Password changed successfully!"},
+    {"code": "forgot_pass__title", "title": "Forgot password"},
+    {"code": "forgot_pass__tutorial1", "title": "* Enter phone number:"},
+    {"code": "forgot_pass__tutorial2", "title": "* Enter received sms code and new password:"},
+    {"code": "forgot_pass__receive_sms", "title": "Receive sms"},
+    {"code": "forgot_pass__send_sms_again", "title": "Send sms again"},
+    {"code": "forgot_pass__enter_sms_code", "title": "Enter sms code"},
+
+    {"code": "aix-footer", "title": "©2019 AIX. All rights reserved."}
+  ],
+  "version": 1
+}
+

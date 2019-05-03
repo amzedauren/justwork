@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{security__title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div class="security__container">
+    <div class="security__option">
+      {{security__change_number}}
+    </div>
+    <div class="security__option">
+      {{security__change_password}}
+    </div>
+    <div class="security__option" *ngIf="canUseFaceId">
+      <span class="security__option-item">{{security__face_id}}</span>
+      <ion-toggle color="success" [(ngModel)]="useFaceId" (ionChange)="toggleFaceId()" [disabled]="!initialized"></ion-toggle>
+    </div>
+    <div class="security__option">
+      <span class="security__option-item">{{security__pattern}}</span>
+      <ion-toggle color="success" [(ngModel)]="usePattern" (ionChange)="togglePattern()" [disabled]="!initialized"></ion-toggle>
+    </div>
+  </div>
+</ion-content>
+
+

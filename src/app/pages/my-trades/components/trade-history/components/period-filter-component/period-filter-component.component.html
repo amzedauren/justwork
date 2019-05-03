@@ -1,0 +1,63 @@
+<ion-content padding>
+  <div>
+    <img src="assets/icon/backBtn.png" alt="" width="20px" margin-end="12px" (click)="close()">
+    <span>Period</span>
+  </div>
+
+  <div>
+    <ion-item-group>
+      <ion-item (click)="setWeek()">
+        <span>Week</span>
+        <img slot="end"
+             *ngIf="!isCustom && dateDifference() == 7"
+             src="assets/icon/tick.png" alt="" width="20px">
+      </ion-item>
+      <ion-item (click)="setMonth()">
+        <span>Month</span>
+        <img slot="end"
+             *ngIf="!isCustom && dateDifference() == 31"
+             src="assets/icon/tick.png" alt="" width="20px">
+      </ion-item>
+      <ion-item (click)="set3Month()">
+        <span>3 month</span>
+        <img slot="end"
+             *ngIf="!isCustom && dateDifference() == 92"
+             src="assets/icon/tick.png" alt="" width="20px">
+      </ion-item>
+      <ion-item (click)="setYear()">
+        <span>Year</span>
+        <img slot="end"
+             *ngIf="!isCustom && dateDifference() == 365"
+             src="assets/icon/tick.png" alt="" width="20px">
+      </ion-item>
+      <ion-item (click)="setCustom()">
+        <span>Custom</span>
+        <img slot="end"
+             *ngIf="isCustom"
+             src="assets/icon/tick.png" alt="" width="20px">
+      </ion-item>
+      <ion-item>
+        <ion-item-group>
+          <ion-item-group>
+            <ion-item>
+              <ion-label>From</ion-label>
+              <ion-datetime placeholder="Choose"
+                            display-format="DD/MM/YY"
+                            picker-format="DDD MMM YYYY"
+                            [pickerOptions]="dateFromPickerOptions"
+                            [value]="!!pickerDateFrom ? pickerDateFrom.toISOString() : null"></ion-datetime>
+            </ion-item>
+            <ion-item>
+              <ion-label>Till</ion-label>
+              <ion-datetime placeholder="Choose"
+                            display-format="DD/MM/YY"
+                            picker-format="DDD MMM YYYY"
+                            [pickerOptions]="dateToPickerOptions"
+                            [value]="!!pickerDateTo ? pickerDateTo.toISOString() : null"></ion-datetime>
+            </ion-item>
+          </ion-item-group>
+        </ion-item-group>
+      </ion-item>
+    </ion-item-group>
+  </div>
+</ion-content>

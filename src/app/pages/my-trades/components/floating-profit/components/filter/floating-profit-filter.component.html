@@ -1,0 +1,19 @@
+<ion-content padding>
+  <div>
+    <ion-title>Filter</ion-title>
+    <img src="assets/icon/backBtn.png" alt="" width="20px" margin-end="12px" (click)="apply()">
+  </div>
+
+  <div>
+    <app-simple-picker-input
+        title="Currency"
+        [pickedTitle]="pickedCurrencyOption?.title"
+        (select)="showCurrencyPicker()"></app-simple-picker-input>
+
+    <app-simple-picker-input
+        title="Security"
+        [pickedTitle]="pickedSecurityOption?.title"
+        (select)="showSecurityPicker()"></app-simple-picker-input>
+  </div>
+
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-content padding>
+  <div>
+    <img src="assets/icon/backBtn.png" alt="" width="20px" margin-end="12px" (click)="apply()">
+    <span>Filter</span>
+  </div>
+
+  <!--  <ion-title>Filter</ion-title>-->
+
+  <div>
+    <p>Choose broker</p>
+    <div class="fast-filter-container">
+      <app-button-filter nullValueTitle="Both"
+                         (select)="onButtonFilterTap($event)"
+                         [nullValue]="true"
+                         [selectedValue]="tradeTypeId"
+                         [values]="tradeTypeFilterOptions"></app-button-filter>
+    </div>
+
+    <app-simple-picker-input
+        title="Broker"
+        [pickedTitle]="pickedBrokerOption?.NAME"
+        (select)="showBrokerPicker()"></app-simple-picker-input>
+
+    <app-simple-picker-input
+        title="Period"
+        [pickedTitle]="periodTitle"
+        (select)="showPeriodPicker()"></app-simple-picker-input>
+
+    <app-simple-picker-input
+        title="Currency"
+        [pickedTitle]="pickedCurrencyOption?.title"
+        (select)="showCurrencyPicker()"></app-simple-picker-input>
+
+    <app-simple-picker-input
+        title="Security"
+        [pickedTitle]="pickedSecurityOption?.title"
+        (select)="showSecurityPicker()"></app-simple-picker-input>
+
+
+  </div>
+
+</ion-content>

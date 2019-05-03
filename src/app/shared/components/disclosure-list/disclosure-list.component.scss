@@ -1,0 +1,22 @@
+.news-card::ng-deep {
+  .card-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .header-div {
+      overflow:hidden;
+      white-space:nowrap;
+      text-overflow: ellipsis;
+    }
+    .title {
+      font-weight: bold;
+      font-size: 13px;
+      color: black;
+
+    }
+    .s-title {
+      font-size: 10px;
+    }
+  }
+}
+

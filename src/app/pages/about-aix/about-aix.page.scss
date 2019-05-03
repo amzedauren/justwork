@@ -1,0 +1,13 @@
+.about-content {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.about-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__title {
+    color: grey;
+  }
+}

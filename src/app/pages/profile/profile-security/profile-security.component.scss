@@ -1,0 +1,18 @@
+.security__container {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+.security__option {
+    align-items: center;
+    border-bottom: 1px solid #ececec;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+    .security__option-item {
+        font-weight: 400;
+        width: 90%;
+    }
+}

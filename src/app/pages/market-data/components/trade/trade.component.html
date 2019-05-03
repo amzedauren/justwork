@@ -1,0 +1,15 @@
+<div class="trade">
+  <div class="col l">
+    <span><b>{{data['currency']}}</b></span>
+    <span>{{data['secCode']}}</span>
+  </div>
+  <div class="trade-right">
+    <div class="graph">
+      <div echarts [options]="chartOption" class="demo-chart"></div>
+    </div>
+    <div class="col">
+      <span class="r"><b>{{data['lastTrade']}}</b></span>
+      <span class="r">{{data['lowPrice']}}</span>
+    </div>
+  </div>
+</div>

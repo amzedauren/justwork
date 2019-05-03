@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-toggle>
+        <ion-button>
+          <ion-icon src="assets/icon/menu.svg"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide>
+        <app-total-value (click)="openFloatingProfit()"></app-total-value>
+      </ion-slide>
+      <ion-slide>
+        <h1>Slide 2</h1>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div>
+
+    <ion-list>
+      <ion-item-group>
+        <ion-grid>
+          <ion-row align-items-baseline>
+            <ion-col align-self-center>
+              <span float="left">Shares ({{brokers?.length}})</span>
+            </ion-col>
+            <ion-col align-self-center>
+              <div float-right>
+                <img src="assets/icon/add.png" alt="" width="24px" margin-end="12px"
+                     (click)="showAddBroker()">
+                <img src="assets/icon/filter.png" alt="" width="24px" (click)="showBrokerFilter()">
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row *ngFor="let broker of brokers" style="border-bottom: 1px solid black">
+            <app-share
+                [broker]="broker"></app-share>
+          </ion-row>
+        </ion-grid>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-row align-items-baseline>
+          <ion-col align-self-center>
+            <span float="left">Trades History</span>
+          </ion-col>
+          <ion-col align-self-center>
+            <span float-end (click)="showTradeHistory()">View all</span>
+          </ion-col>
+        </ion-row>
+
+        <app-trade
+            *ngFor="let trade of trades"
+            [trade]="trade"></app-trade>
+
+      </ion-item-group>
+    </ion-list>
+
+  </div>
+</ion-content>

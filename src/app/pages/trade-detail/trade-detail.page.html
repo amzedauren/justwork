@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="market-data"></ion-back-button>
+    </ion-buttons>
+    <ion-title>trade-detail: {{secCode}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <app-stock-ticker [data]="stocks" *ngIf="stocks"></app-stock-ticker>
+
+  <div class="news">
+    <div class="nav">
+      <span style="font-size: 15px"><b>{{secCode}} Market</b></span>
+    </div>
+
+  </div>
+
+  <div class="graph">
+    <div class="controls">
+      <app-button-filter nullValueTitle="Both"
+                         [selectedValue]="dateFilterOptions[0]"
+                         (select)="onDateFilterTap($event)"
+                         [values]="dateFilterOptions"></app-button-filter>
+    </div>
+    <div echarts [options]="chartOption" class="trade-line-chart"></div>
+  </div>
+
+
+  <div class="news">
+    <div class="nav">
+      <span style="font-size: 15px"><b>Trading summary</b></span>
+    </div>
+
+    <div class="horizontal-scroll-inner">
+      <div class="horizontal-scroll">
+        <div class="col">
+          <span class="stat"><span>Currency</span> <span>{{secCode}}</span></span>
+          <span class="stat"><span>Asset Class</span> <span>{{secCode}}</span></span>
+          <span class="stat"><span>Symbol</span> <span>{{secCode}}</span></span>
+          <span class="stat"><span>State</span> <span>{{secCode}}</span></span>
+        </div>
+        <div class="col">
+          <span class="stat"><span>Bid Qty</span> <span>0</span></span>
+          <span class="stat"><span>Bid price</span> <span>0</span></span>
+          <span class="stat"><span>Offer Price</span> <span>0</span></span>
+          <span class="stat"><span>Offer Qty</span> <span>0</span></span>
+        </div>
+        <div class="col">
+          <span class="stat"><span>IOP</span> <span>0</span></span>
+          <span class="stat"><span>ICP</span> <span>0</span></span>
+          <span class="stat"><span>Open</span> <span>0</span></span>
+          <span class="stat"><span>High Price</span> <span>0</span></span>
+        </div>
+        <div class="col">
+          <span
+              class="stat"><span>Low Price</span> <span>{{tradingSummary['lowPrice']}}</span></span>
+          <span
+              class="stat"><span>Last Trade</span> <span>{{tradingSummary['lastTradePrice']}}</span></span>
+          <span
+              class="stat"><span>Previous Close</span> <span>{{tradingSummary['previousClose']}}</span></span>
+          <span class="stat"><span>% Change</span> <span>{{tradingSummary['percentChange']}}</span></span>
+        </div>
+        <div class="col">
+          <span
+              class="stat"><span>Volume</span> <span>{{tradingSummary['totalVolume']}}</span></span>
+          <span class="stat"><span>Value</span> <span>{{tradingSummary['totalValue']}}</span></span>
+          <span
+              class="stat"><span>Number of Trades</span> <span>{{tradingSummary['numberOfTrades']}}</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="news">
+    <div class="nav">
+      <span style="font-size: 15px"><b>Company Disclosures</b></span>
+    </div>
+    <app-disclosure-list [secCode]="secCode"></app-disclosure-list>
+  </div>
+
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+      <!--      <img src="assets/icon/backBtn.png" alt="" width="20px" margin-end="12px" (click)="close()">-->
+    </ion-buttons>
+    <ion-title>Period</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <app-floating-profit-info></app-floating-profit-info>
+  </div>
+
+  <ion-grid>
+    <ion-row align-items-baseline>
+      <ion-col align-self-center>
+        <span float="left">Instruments</span>
+      </ion-col>
+      <ion-col align-self-center>
+        <div float-right>
+          <img src="assets/icon/filter.png" alt="" width="24px" (click)="showFilter()">
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <ion-list>
+    <app-floating-profit-instrument
+        *ngFor="let instrument of instruments"
+        [instrument]="instrument"></app-floating-profit-instrument>
+  </ion-list>
+</ion-content>

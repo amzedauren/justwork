@@ -1,0 +1,8 @@
+<ion-button
+    [ngStyle]="{'background-color' : selectedValue == null ? selectedColor : basicColor}"
+    (click)="selectValue(null)"
+    *ngIf="nullValue">{{nullValueTitle}}</ion-button>
+<ion-button
+    *ngFor="let value of values"
+    (click)="selectValue(value)"
+    [ngStyle]="{'background-color' : selectedValue == value ? selectedColor : basicColor}">{{value[valueTitleKey]}}</ion-button>

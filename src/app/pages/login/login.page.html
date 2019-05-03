@@ -1,0 +1,51 @@
+<ion-header no-border>
+  <ion-toolbar color="primary">
+    <ion-select interface="popover" [(ngModel)]="currentLanguage" slot="end">
+      <ion-select-option value="en">EN</ion-select-option>
+      <ion-select-option value="ru">RUS</ion-select-option>
+      <ion-select-option value="kz">KZ</ion-select-option>
+      <ion-select-option value="zh">ZH</ion-select-option>
+    </ion-select>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding class="login-container">
+
+  <div class="login-content">
+
+    <div class="logo">
+      <img src="assets/logo.png" width="200px" alt="">
+    </div>
+
+    <ion-list no-padding class="login-fields">
+      <ion-item color="primary">
+        <ion-label position="stacked" class="input-label">Email</ion-label>
+        <ion-input placeholder='example@mail.com'></ion-input>
+      </ion-item>
+      <ion-item color="primary">
+        <ion-label position="stacked" class="input-label">Password</ion-label>
+        <ion-input placeholder='Enter password' type="password"></ion-input>
+      </ion-item>
+      <ion-item color="primary" class="login-btn-item">
+        <ion-button color="secondary" >Login</ion-button>
+      </ion-item>
+
+      <ion-item color="primary">
+        <ion-label routerLink="/forgot-password" color="secondary" text-center>Forgot password?</ion-label>
+      </ion-item>
+
+    </ion-list>
+
+    <div class="login-alternatives"> 
+      <!--todo change to svg icons like <ion-icon src="assets/icon/keyIcon.svg"></ion-icon>-->
+      <ion-item color="primary" >
+        <img src="assets/icon/keyIcon.png"  slot="start" alt="" width="32px">
+        <img src="assets/icon/faceId.png"  slot="end" alt="" width="32px">
+      </ion-item>
+    </div>
+
+    <aix-footer></aix-footer>
+  </div>
+
+
+
+</ion-content>

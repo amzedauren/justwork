@@ -1,0 +1,60 @@
+<div class="step3Content">
+  <ion-button routerLink="/registration/step2" color="light">back</ion-button>
+  <ion-item>
+    <ion-select placeholder="Select One" [(ngModel)]="currentLanguage" (ionChange)="changeLanguage($event)">
+      <ion-select-option *ngFor="let i of languageList" [value]="i.code">{{i.code}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <br>
+  <br>
+  <ion-label>Step 2/3</ion-label>
+  <h1>Profile</h1>
+
+  <form [formGroup]="profileForm">
+
+    <ion-list>
+
+      <ion-list-header>Please fill all fields</ion-list-header>
+      <ion-list-header>Choose title (Optional)</ion-list-header>
+
+      <ion-item>
+        <div>
+          <ion-button (click)="setUserTitle('Mr')" [color]="userTitle == 'Mr' ? 'dark' : 'light'">Mr</ion-button>
+          <ion-button (click)="setUserTitle('Mrs')" [color]="userTitle == 'Mrs' ? 'dark' : 'light'">Mrs</ion-button>
+          <ion-button (click)="setUserTitle('Miss')" [color]="userTitle == 'Miss' ? 'dark' : 'light'">Miss</ion-button>
+          <ion-button (click)="setUserTitle('Dr')" [color]="userTitle == 'Dr' ? 'dark' : 'light'">Dr</ion-button>
+        </div>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="Name" formControlName="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Surname" formControlName="surname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Email address" formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Repeat password" formControlName="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Country</ion-label>
+        <ion-select placeholder="Select One" formControlName="country">
+          <ion-select-option *ngFor="let country of countries; let index=index" [value]="country.id">{{country.title}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="IIN/Passport no(Optional)" formControlName="iin"></ion-input>
+      </ion-item>
+
+    </ion-list>
+  </form>
+
+  <ion-button routerLink="/registration/step4" style="width: 100%" color="light">Next</ion-button>
+</div>

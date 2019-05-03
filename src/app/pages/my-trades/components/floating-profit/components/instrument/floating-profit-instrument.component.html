@@ -1,0 +1,28 @@
+<ion-row style="border-bottom: 1px solid black">
+  <ion-col>
+    <ion-row>
+      <span>Date {{instrument.shortCode}}</span>
+    </ion-row>
+    <ion-row>
+      <span>{{instrument.name}}</span>
+    </ion-row>
+    <ion-row>
+      <span>Settled</span>
+    </ion-row>
+  </ion-col>
+  <ion-col>
+    <ion-row>
+      <ion-col>
+        <div class="sec-code" float-end>{{instrument.value}}</div>
+        <div class="type" float-end>buy</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <span class="amount" float-end>
+          {{instrument.diff}}({{instrument.diff / instrument.value * 100}})
+        </span>
+      </ion-col>
+    </ion-row>
+  </ion-col>
+</ion-row>

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{help__title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list *ngFor="let help of helpList; let i = index" class="help-list">
+    <ion-item [lines]="help.text ? 'none' : ''" (click)="loadHelpMessage(i)">
+      <ion-label>
+        <ion-text>{{help.title}}</ion-text>
+      </ion-label>
+      <ion-icon name="arrow-dropdown" slot="end" *ngIf="!help.text"></ion-icon>
+      <ion-icon name="arrow-dropup" slot="end" *ngIf="help.text"></ion-icon>
+    </ion-item>
+    <ion-item *ngIf="help.text">
+      <ion-label text-wrap>{{help.text}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

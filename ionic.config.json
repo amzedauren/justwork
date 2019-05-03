@@ -1,0 +1,7 @@
+{
+  "name": "aix-mobile",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

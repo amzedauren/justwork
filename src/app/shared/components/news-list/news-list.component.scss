@@ -1,0 +1,33 @@
+.news-card::ng-deep {
+  //ion-card-title {
+  //  font-size: 14px;
+  //  font-weight: bold;
+  //}
+  .card-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .image-div {
+      width: 20%;
+      margin-right: 10px;
+    }
+    .header-div {
+      width: 80%;
+      overflow:hidden;
+      white-space:nowrap;
+      text-overflow: ellipsis;
+      //display: flex;
+      //flex-direction: column;
+    }
+    .title {
+      font-weight: bold;
+      font-size: 13px;
+      color: black;
+
+    }
+    .s-title {
+      font-size: 10px;
+    }
+  }
+}
+

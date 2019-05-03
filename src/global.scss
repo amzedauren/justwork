@@ -1,0 +1,57 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+.patt-holder {
+  background: white;
+}
+
+.patt-dots {
+  background: gray !important;
+  z-index: 10;
+}
+
+.patt-lines {
+  //background-color: #82EDAFB8 !important;
+  background-color: darkseagreen;
+
+}
+
+/////////////////// ui
+
+ion-content {
+  --ion-background-color: #1d3664;
+}
+
+///////////////
+
+.header-logo {
+  width: 48pt;
+}
+
+.content-title {
+  font-family: "Gotham Medium";
+  font-size: 18pt;
+  line-height: 28pt;
+  letter-spacing: -0.5pt;
+  text-align: center;
+}
+
+.content-subtitle {
+  font-size: 12pt;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 24pt;
+  text-align: center;
+}
+
+.color-sand {
+  color: #e5c25d;
+  font-weight: bold;
+}

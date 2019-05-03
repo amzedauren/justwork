@@ -1,0 +1,18 @@
+<ion-content padding>
+  <div>
+    <img src="assets/icon/backBtn.png" alt="" width="20px" margin-end="12px" (click)="close()">
+    <span>{{title}}</span>
+  </div>
+
+  <div>
+    <ion-item-group>
+      <ion-item *ngFor="let option of pickOptions" (click)="pickOption(option)">
+        <span>{{option[optionTitleKey]}}</span>
+        <img slot="end"
+             *ngIf="pickedOption == option"
+             (click)="close()"
+             src="assets/icon/tick.png" alt="" width="20px">
+      </ion-item>
+    </ion-item-group>
+  </div>
+</ion-content>

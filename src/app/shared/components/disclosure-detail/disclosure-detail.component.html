@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+
+  <h2>Company Code</h2>
+  <span>{{data['company_code']}}</span>
+
+  <h2>Name</h2>
+  <span>{{data['name']}}</span>
+
+  <h2>Summary</h2>
+  <span>{{data['summary']}}</span>
+
+  <h2>Issuer</h2>
+  <span>{{data['issuer']}}</span>
+
+  <h2>Description</h2>
+  <span>{{data['description']}}</span>
+
+  <h2>PDF</h2>
+  <span *ngFor="let i of attachments" [innerHTML]="i['description']['rendered']"></span>
+
+
+</ion-content>
+

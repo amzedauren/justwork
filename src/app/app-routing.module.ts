@@ -20,7 +20,9 @@ const routes: Routes = [
 
   { path: 'trade-detail', loadChildren: './pages/trade-detail/trade-detail.module#TradeDetailPageModule' },
   { path: 'forgot-password', loadChildren: './pages/forgot-password/forgot-password.module#ForgotPasswordPageModule' },
-  { path: 'qr-scanner', loadChildren: './pages/qr-scanner/qr-scanner.module#QrScannerPageModule' }
+  { path: 'qr-scanner', loadChildren: './pages/qr-scanner/qr-scanner.module#QrScannerPageModule' },
+
+  { path: 'registration', loadChildren: './pages/registration/registration.module#RegistrationPageModule'}
 ];
 
 @NgModule({

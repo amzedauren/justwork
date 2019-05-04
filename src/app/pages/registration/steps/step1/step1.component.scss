@@ -1,12 +1,12 @@
 .reg-content {
-  height: 30%;
+  height: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
 }
 .register-slides {
-  height: 70%;
+  height: 60%;
 }
 
 .next-btn {
@@ -26,4 +26,99 @@
 }
 
 
+.slide {
+  color: #ffffff;
+  h1 {
+    font-weight: 800;
+  }
+  p {
+    margin-left: 20pt;
+    margin-right: 20pt;
+    font-size: 12pt;
+    opacity: 50%;
+  }
+}
 
+ion-slides {
+  --bullet-background: white;
+  --bullet-background-active: white;
+}
+
+ion-list {
+  background-color: rgba(0, 0, 0, 0.12) !important;
+}
+ion-item {
+  width: 100%;
+}
+.get-started {
+  background-color: rgba(0, 0, 0, 0.12);
+  padding-left: 20pt;
+  padding-right: 20pt;
+  height: 40%;
+  padding-top: 27pt;
+  padding-bottom: 27pt;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.get-started-text {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.login-asguest {
+  color: #e5c25d;
+  font-weight: bold;
+}
+
+.rights-reserved {
+  color: rgba(255, 255, 255, 0.24);
+  font-size: 12px;
+}
+
+.next-btn {
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  background-color: #e5c25d;
+  color: #1d3664;
+  font-weight: 800;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+.phone-input {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding-left: 12.5px;
+  padding-right: 12.5px;
+  color: white !important;
+  font-weight: bold;
+}
+
+.phone-input-div {
+  border: 1px  rgba(255, 255, 255, 0.24) solid;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+
+}
+
+.kz-span {
+  color: white !important;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 12.5px;
+  padding-left: 12.5px;
+  height: 100%;
+  border-right: 1px  rgba(255, 255, 255, 0.24) solid;
+}

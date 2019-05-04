@@ -1,18 +1,28 @@
 <div class="step2Page">
-  <ion-button routerLink="/registration/step1" color="light">back</ion-button>
-  <br>
-  <br>
-  <ion-label>Step 1/3</ion-label>
-  <h1>SMS code</h1>
-  <ion-label>Please enter 4-digit code that we sent to number that you entered.</ion-label>
+  <ion-icon class="icon-back" routerLink="/registration/step1" name="arrow-back"></ion-icon>
 
-  <input type="number" placeholder="sms code" maxlength="1" class="digit-input" [(ngModel)]="userCode">
+  <div class="step2">
+    <div class="sms-container">
+      <h1>SMS code</h1>
+      <p>Please enter 4-digit code that we sent to number that you entered.</p>
+      
+      <div class="sms-code-here">
+        <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+        <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+        <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+        <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+      </div>
+    
+      <div class="resend-sms">
+        <span *ngIf="timer != 0">отправить код повторно можно через {{timer}}</span>
+        <span class="resend-sms-text" *ngIf="timer === 0" (click)="resendCode()">Отправить повторно</span>
+      </div>
+    </div>
 
-  <div class="resend-sms">
-    <span *ngIf="timer != 0">отправить код повторно можно через {{timer}}</span>
-    <ion-button *ngIf="timer === 0" (click)="resendCode()">отправить повторно</ion-button>
+    <div class="next-btn-div">
+      <button class="next3-btn" routerLink="/registration/step3" color="light" style="width: 100%;">Next</button>
+    </div>
   </div>
 
-  <ion-button class="next3-btn" routerLink="/registration/step3" color="light" style="width: 100%;">Next</ion-button>
 </div>
 

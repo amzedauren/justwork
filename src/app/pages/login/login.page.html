@@ -19,18 +19,22 @@
     <ion-list no-padding class="login-fields">
       <ion-item color="primary">
         <ion-label position="stacked" class="input-label">Email</ion-label>
-        <ion-input placeholder='example@mail.com'></ion-input>
+        <ion-input class="input-field" placeholder='example@mail.com'></ion-input>
       </ion-item>
       <ion-item color="primary">
         <ion-label position="stacked" class="input-label">Password</ion-label>
-        <ion-input placeholder='Enter password' type="password"></ion-input>
+        <ion-input class="input-field password-input" placeholder='Enter password' type="password"></ion-input>
       </ion-item>
       <ion-item color="primary" class="login-btn-item">
-        <ion-button color="secondary" >Login</ion-button>
+        <button class="login-btn">Login</button>
       </ion-item>
 
       <ion-item color="primary">
-        <ion-label routerLink="/forgot-password" color="secondary" text-center>Forgot password?</ion-label>
+        <ion-label class="forgot-password" routerLink="/forgot-password" color="secondary" text-center>Forgot password?</ion-label>
+      </ion-item>
+
+      <ion-item color="primary">
+        <ion-label class="dont-have" routerLink="/registration" color="secondary" text-center>Dont have any accounts?</ion-label>
       </ion-item>
 
     </ion-list>

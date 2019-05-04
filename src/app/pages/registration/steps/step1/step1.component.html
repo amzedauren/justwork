@@ -1,25 +1,42 @@
 <ion-slides class="register-slides" pager="true" [options]="{effect: 'flip'}">
-  <!--todo to different component-->
   <ion-slide>
-    <h1>Onboarding 1</h1>
+    <div class="slide">
+      <h1>Gateway</h1>
+      <p>AIX - explore the new global gateway to Kazakhstan & Central Asian markets</p>
+      <img src="https://cdn.zeplin.io/5cbd487f0b611d339e0005f0/assets/F126E605-ADF8-4AD9-8868-B350194D0B2D.png" alt="">
+    </div>
   </ion-slide>
   <ion-slide>
-    <h1>Onboarding 2</h1>
+    <div class="slide">
+      <h1>Global Exchange</h1>
+      <p>AIX - become part of the new Silk Way at the first and only global exchange in region</p>
+      <img src="https://cdn.zeplin.io/5cbd487f0b611d339e0005f0/assets/62EBD799-91EA-40BA-A621-BF4E9C5B5DEE.png" alt="">
+    </div>
   </ion-slide>
   <ion-slide>
-    <h1>Onboarding 3</h1>
+    <div class="slide">
+      <h1>Let's Start</h1>
+      <p>AIX - start your journey now</p>
+      <img src="https://cdn.zeplin.io/5cbd487f0b611d339e0005f0/assets/481F3B03-658B-48F2-A717-0AFA5C46193F.png" alt="">
+    </div>
   </ion-slide>
 </ion-slides>
 
 
-<ion-list>
+<ion-list class="get-started">
   <ion-text>
-    <ion-label>Get started with AIX</ion-label>
+    <ion-label class="get-started-text" text-center>Get started with AIX</ion-label>
   </ion-text>
-  <ion-item>
-    <ion-icon name="color-wand"></ion-icon>
-    <ion-input type="tel" placeholder="Номер телефона" [(ngModel)]="phoneNumber"></ion-input>
-  </ion-item>
+  <div class="phone-input-div">
+    <span class="kz-span">KZ</span>
+    <input class="phone-input" type="tel" [(ngModel)]="phoneNumber">
+  </div>
+  <button routerLink="/registration/step2"  class="next-btn">Next</button>
+  <ion-text>
+    <ion-label class="login-asguest" text-center>Login as Guest</ion-label>
+  </ion-text>
+  <ion-text>
+    <ion-label class="rights-reserved" text-center>© 2019 AIX. All rights reserved.</ion-label>
+  </ion-text>
 </ion-list>
-<ion-button routerLink="/registration/step2" [queryParams]="{phoneNumber: phoneNumber}" class="next-btn" color="light" [disabled]="isNextDisabled()">Next</ion-button>
 

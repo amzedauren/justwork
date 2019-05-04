@@ -1,10 +1,11 @@
+
+
 .login-content {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 .logo {
@@ -17,6 +18,7 @@
 .login-alternatives {
 }
 
+
 .login-fields { //ion-list
   padding: 0;
   flex: 3;
@@ -24,6 +26,7 @@
   margin: auto;
   max-width: 420px;
   width: 100%;
+
   ion-item {
     --border-width: 0;
   }
@@ -31,12 +34,16 @@
   ion-input::ng-deep {
     --padding-start: 10px !important;
     --padding-end: 10px !important;
-    border:1px solid rgba(255, 255, 255, .24);
-    border-radius: 3px;
     height: 50px;
     font-size: 16px;
     line-height: 24px;
-
+    input {
+      border-radius: 3px;
+      border:1px solid rgba(255, 255, 255, .24);
+      &:focus {
+        border:1px solid #e5c25d;
+      }
+    }
   }
 
   .input-label {
@@ -46,6 +53,7 @@
     margin-bottom: 5px;
   }
 
+  
   .login-btn-item::ng-deep {
     --border-width: 0 !important;
     ion-button {
@@ -55,6 +63,25 @@
     }
   }
 
+  .forgot-password {
+    color: #e5c25d !important;
+    font-weight: 800;
+  }
 
+  .dont-have {
+    color: #ffffff !important;
+    font-weight: 400;
+  }
+
+  .login-btn {
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background-color: #e5c25d;
+    color: #1d3664;
+    font-weight: 800;
+    font-size: 16px;
+    border-radius: 3px;
+  }
 }
 

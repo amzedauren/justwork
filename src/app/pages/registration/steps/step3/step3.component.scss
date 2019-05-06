@@ -1,3 +1,113 @@
 .step3Content {
-  padding: 10px;
+  height: 100%;;
+}
+
+.icon-back {
+  color: #ffffff;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.step3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.next-btn-div {
+  padding-bottom: 40px;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.next4-btn {
+  width: 100%;
+  height: 50px;
+  background-color: #e5c25d;
+  color: #1d3664;
+  font-weight: 800;
+  font-size: 16px;
+  border-radius: 3px;
+} 
+
+.profile-container {
+  padding: 20px;
+  h1 {
+    color: #ffffff;
+    font-weight: 800;
+  }
+  p {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .resend-sms {
+    color: #ffffff;
+  }
+  .resend-sms-text {
+    color: #e5c25d;
+    font-weight: 800;
+  }
+}
+.step3-fields { //ion-list
+  padding: 0;
+  flex: 3;
+  display: block;
+  margin: auto;
+  max-width: 420px;
+  width: 100%; 
+  color: #ffffff;
+
+  ion-item {
+    --border-width: 0;
+  }
+  
+  ion-input::ng-deep {
+    --padding-start: 10px !important;
+    --padding-end: 10px !important;
+    height: 50px;
+    font-size: 16px;
+    line-height: 24px;
+    input {
+      border-radius: 3px;
+      border:1px solid rgba(255, 255, 255, .24);
+      &:focus {
+        border:1px solid #e5c25d;
+      }
+    }
+  }
+  .input-label {
+    color: #ffffff;
+    line-height: 24px;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    &::placeholder {
+      color: #ffffff;
+    }
+  }
+  ion-list-header {
+    color: #ffffff;
+  }
+}
+
+.input-field {
+  color:#ffffff;
+  &::placeholder {
+    color: #ffffff;
+  }
+}
+
+
+.title-btn {
+  background-color: transparent;
+  border: 1px solid #e5c25d;
+  margin-right: 15px;
+  border-radius: 3px;
+  height: 40px;
+  width: 60px;
+  font-weight: 800;
+}
+.title-checked {
+  background-color: #e5c25d;
 }

@@ -14,6 +14,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {IonicStorageModule} from '@ionic/storage';
 import { CsdService } from './services/csd.service';
 import { StorageService } from './services/storage.service';
+import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
 
 const services = [
   HttpService,
@@ -38,7 +39,8 @@ const services = [
     services,
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    FingerprintAIO
   ],
   bootstrap: [AppComponent]
 })

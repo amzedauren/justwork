@@ -1,0 +1,15 @@
+<div class="step-content">
+  <ion-icon class="icon-back" routerLink="/registration/profile-step" name="arrow-back" color="light"></ion-icon>
+
+  <br>
+  <br>
+  <ion-label color="light">Step 2/3</ion-label>
+  <ion-label color="light">Would you like to use Biometric login</ion-label>
+
+  <ion-button style="width: 100%" color="light" *ngIf="canFaceId" (click)="useBiometric(true, false)">Use Face ID</ion-button>
+  <ion-button style="width: 100%" color="light" *ngIf="canFingerprint" (click)="useBiometric(false, true)">Use fingerprint</ion-button>
+
+
+  <ion-button style="width: 100%" color="light" (click)="useBiometric(false, false)">No Thanks</ion-button>
+
+</div>

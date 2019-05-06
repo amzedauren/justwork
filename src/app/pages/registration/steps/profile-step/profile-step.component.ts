@@ -9,10 +9,10 @@ import {Language} from '../../../../models/language';
 
 @Component({
   selector: 'app-step3',
-  templateUrl: './step3.component.html',
-  styleUrls: ['./step3.component.scss'],
+  templateUrl: './profile-step.component.html',
+  styleUrls: ['./profile-step.component.scss'],
 })
-export class Step3Component implements OnInit {
+export class ProfileStep implements OnInit {
 
   countries: Country[];
   languageList: Language[];

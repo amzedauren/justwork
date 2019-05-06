@@ -6,6 +6,9 @@ import {FormBuilder} from '@angular/forms';
 })
 export class RegistrationService {
 
+  useFaceId: boolean = false;
+  useFingerprint: boolean = false;
+
   private profileForm = this.fb.group({
     phoneNumber: [''],
     title: [''],
@@ -25,5 +28,10 @@ export class RegistrationService {
 
   reset() {
     this.profileForm.reset();
+  }
+
+  setBiometric(faceId: boolean, fingerprint: boolean) {
+    this.useFaceId = faceId;
+    this.useFingerprint = fingerprint;
   }
 }

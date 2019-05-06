@@ -6,12 +6,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { RegistrationPage } from './registration.page';
-import {Step2Component} from './steps/step2/step2.component';
-import {Step1Component} from './steps/step1/step1.component';
-import {Step3Component} from './steps/step3/step3.component';
-import {Step4Component} from './steps/step4/step4.component';
+import {SmsStep} from './steps/sms-step/sms-step.component';
+import {PhoneNumberStep} from './steps/phone-number-step/phone-number-step.component';
+import {ProfileStep} from './steps/profile-step/profile-step.component';
+import {PatternStep} from './steps/pattern-step/pattern-step.component';
 import {RegistrationService} from './registration.service';
 import {LastStepComponent} from './steps/last-step/last-step.component';
+import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
+import {BiometricStep} from "./steps/biometric-step/biometric-step.component";
+
 
 const routes: Routes = [
   {
@@ -20,23 +23,27 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'step1'
+        redirectTo: 'phone-number-step'
       },
       {
-        path: 'step1',
-        component: Step1Component
+        path: 'phone-number-step',
+        component: PhoneNumberStep
       },
       {
-        path: 'step2',
-        component: Step2Component
+        path: 'sms-step',
+        component: SmsStep
       },
       {
-        path: 'step3',
-        component: Step3Component
+        path: 'profile-step',
+        component: ProfileStep
       },
       {
-        path: 'step4',
-        component: Step4Component
+        path: 'pattern-step',
+        component: PatternStep
+      },
+      {
+        path: 'biometric-step',
+        component: BiometricStep
       },
       {
         path: 'last-step',
@@ -56,12 +63,13 @@ const routes: Routes = [
   ],
   declarations: [
     RegistrationPage,
-    Step2Component,
-    Step1Component,
-    Step3Component,
-    Step4Component,
+    SmsStep,
+    PhoneNumberStep,
+    ProfileStep,
+    PatternStep,
     LastStepComponent,
+    BiometricStep
   ],
-  providers: [RegistrationService]
+  providers: [RegistrationService, FingerprintAIO]
 })
 export class RegistrationPageModule {}

@@ -1,15 +1,14 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {TwilioService} from '../../../../services/twilio.service';
-import {LocalizationService} from '../../../../localization.service';
 import {RegistrationService} from '../../registration.service';
 
 @Component({
-  selector: 'app-step2',
-  templateUrl: './step2.component.html',
-  styleUrls: ['./step2.component.scss'],
+  selector: 'sms-step',
+  templateUrl: './sms-step.component.html',
+  styleUrls: ['./sms-step.component.scss'],
 })
-export class Step2Component implements OnInit {
+export class SmsStep implements OnInit {
 
   @ViewChild("input1") inputE1;
   @ViewChild("input2") inputE2;

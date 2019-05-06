@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-step1',
-  templateUrl: './step1.component.html',
-  styleUrls: ['./step1.component.scss'],
+  templateUrl: './phone-number-step.component.html',
+  styleUrls: ['./phone-number-step.component.scss'],
 })
-export class Step1Component implements OnInit {
+export class PhoneNumberStep implements OnInit {
 
   phoneNumber: string;
 

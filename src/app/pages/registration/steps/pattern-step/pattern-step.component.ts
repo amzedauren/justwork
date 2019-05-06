@@ -5,10 +5,10 @@ import PatternLock from 'patternlock';
 
 @Component({
   selector: 'app-step4',
-  templateUrl: './step4.component.html',
-  styleUrls: ['./step4.component.scss'],
+  templateUrl: './pattern-step.component.html',
+  styleUrls: ['./pattern-step.component.scss'],
 })
-export class Step4Component implements OnInit {
+export class PatternStep implements OnInit {
 
   constructor(private storage: Storage) { }
 

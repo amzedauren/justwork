@@ -1,5 +1,5 @@
 <div class="step3Content">
-  <ion-icon class="icon-back" routerLink="/registration/step1" name="arrow-back"></ion-icon>
+  <ion-icon class="icon-back" routerLink="/registration/phone-number-step" name="arrow-back"></ion-icon>
 
   <div class="step3">
 
@@ -29,12 +29,12 @@
             <ion-label position="stacked" class="input-label">Surname *</ion-label>
             <ion-input class="input-field password-input" placeholder="Your surname" formControlName="surname"></ion-input>
           </ion-item>
-          <!-- <ion-item no-padding>
+          <ion-item no-padding>
             <ion-label position="stacked" class="input-label">Country</ion-label>
             <ion-select placeholder="Select One" formControlName="country">
               <ion-select-option *ngFor="let country of countries; let index=index" [value]="country.id">{{country.title}}</ion-select-option>
             </ion-select>
-          </ion-item> -->
+          </ion-item>
           <ion-item no-padding>
             <ion-label position="stacked" class="input-label">Email *</ion-label>
             <ion-input class="input-field password-input" placeholder='example@mail.com' type="email"></ion-input>
@@ -57,7 +57,7 @@
     </div>
 
     <div class="next-btn-div">
-      <button class="next4-btn" routerLink="/registration/step4" color="light" style="width: 100%;">Next</button>
+      <button class="next4-btn" routerLink="/registration/biometric-step" color="light" style="width: 100%;">Next</button>
     </div>
   </div>
 

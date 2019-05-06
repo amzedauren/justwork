@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { LoginPage } from './login.page';
 import {FooterModule} from '../../shared/ui/footer/footer.module';
+import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
 
 const routes: Routes = [
   {
@@ -23,6 +24,9 @@ const routes: Routes = [
     FooterModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [LoginPage]
+  declarations: [LoginPage],
+  providers: [
+      FingerprintAIO
+  ]
 })
 export class LoginPageModule {}

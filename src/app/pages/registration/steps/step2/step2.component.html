@@ -5,22 +5,23 @@
     <div class="sms-container">
       <h1>SMS code</h1>
       <p>Please enter 4-digit code that we sent to number that you entered.</p>
-      
+
       <div class="sms-code-here">
-        <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
-        <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
-        <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
-        <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+        <input #input1 type="text" maxLength="1" size="1" (focus)="onInputFocus(1)" (keypress)="toInput(1, $event)"/>
+        <input #input2 type="text" maxLength="1" size="1" (focus)="onInputFocus(2)" (keypress)="toInput(2, $event)"/>
+        <input #input3 type="text" maxLength="1" size="1" (focus)="onInputFocus(3)" (keypress)="toInput(3, $event)"/>
+        <input #input4 type="text" maxLength="1" size="1" (focus)="onInputFocus(4)" (keypress)="toInput(4, $event)"/>
+
       </div>
-    
+
       <div class="resend-sms">
-        <span *ngIf="timer != 0">отправить код повторно можно через {{timer}}</span>
-        <span class="resend-sms-text" *ngIf="timer === 0" (click)="resendCode()">Отправить повторно</span>
+        <span *ngIf="timer != 0">Resend after {{timer}} sec...</span>
+        <a class="resend-sms-text" [class.resend-disabled]="timer != 0" (click)="resendCode()"> Resend</a>
       </div>
     </div>
 
     <div class="next-btn-div">
-      <button class="next3-btn" routerLink="/registration/step3" color="light" style="width: 100%;">Next</button>
+      <button class="next3-btn" routerLink="/registration/step3" [disabled]="!canGoNext" color="light" style="width: 100%;">Next</button>
     </div>
   </div>
 
